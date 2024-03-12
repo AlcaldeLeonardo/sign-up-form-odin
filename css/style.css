@@ -15,10 +15,40 @@
     width: 100vw;
 }
 .container__imageContainer{
-    background-color: red;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../src/img/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    min-width: 33vw;
 }
+.logoContainer{
+    margin-top: 8.7em;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.295);
+    align-items: center;
+    justify-content: center;
+    padding: .7rem;
+}
+.imgLogo{
+    width: 3.5rem;
+}
+.textLogo{
+    font-family: "NorseB";
+    font-size: 3.7rem;
+    color: white;
+}
+.textCopy{
+    color: rgba(255, 255, 255, 0.658);
+    font-size: 0.6rem;
+    text-align: center;
+    padding-bottom: .3rem;
+}
+
+
+
+
+
 .container__formContainer{
     background-color:blue;
-    flex-grow: 1;
 }
