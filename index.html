@@ -7,17 +7,51 @@
         <title>Sign Up Form Example</title>
     </head>
     <body>
-        <main class="container" >
+        <main class="container">
             <div class="container__imageContainer">
                 <div class="logoContainer">
-                    <img src="src/img/odin-lined.png" alt="" class="imgLogo">
+                    <img src="src/img/odin-lined.png" alt="" class="imgLogo" />
                     <p class="textLogo">Odin</p>
                 </div>
                 <div class="container__copyContainer">
-                    <p class="textCopy textCopyP">Photo by <a class=" textCopy textCopyA textAnchor" href="">Halie West</a> on <a class="textCopy textCopyA textAnchor" href="">Unplash</a></p>
+                    <p class="textCopy textCopyP">
+                        Photo by
+                        <a class="textCopy textCopyA textAnchor" href=""
+                            >Halie West</a
+                        >
+                        on
+                        <a class="textCopy textCopyA textAnchor" href=""
+                            >Unplash</a
+                        >
+                    </p>
                 </div>
             </div>
             <div class="container__formContainer">
+                <div class="textformContainer">
+                    <p>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize your
+                        deepest dreams. <span>Sign up now to get started.</span>
+                    </p>
+                    <p class="textformContainerLast">You know you want to.</p>
+                </div>
+                <form class="form" action="" method="post">
+                    <h2>Let's do this!</h2>
+                    <div class="form__row">
+                        <label for="">First Name<input type="text" /></label>
+                        <label for="">Last Name<input type="text" /></label>
+                    </div>
+                    <div class="form__row">
+                        <label for="">Email<input type="email" /></label>
+                        <label for="">Phone Number<input type="tel" /></label>
+                    </div>
+                    <div class="form__row">
+                        <label for="">Password<input class="containerPassword" type="password" /><p class="passwordError">password do not match</p></label>
+                        <label  for="">ConfirmPassword<input class="containerPassword" type="password" /></label>
+                    </div>
+                </form>
+                <button class="btnCreateAcount"type="button">Create Acount</button>
+                <p class="AlreadyCount">Alread have an account? <a href="">Log in</a></p>
             </div>
         </main>
         <script src="scripts/validation.js"></script>

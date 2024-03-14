@@ -3,52 +3,139 @@
     src: url(../src/fonts/Norse-Bold.otf);
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.container{
+
+.container {
     display: flex;
-    height: 100vh;
     width: 100vw;
 }
-.container__imageContainer{
+
+.container__imageContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-image: url(../src/img/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
+    background-position: center;
     min-width: 33vw;
 }
-.logoContainer{
+
+.logoContainer {
     margin-top: 8.7em;
     display: flex;
     background-color: rgba(0, 0, 0, 0.295);
     align-items: center;
     justify-content: center;
-    padding: .7rem;
+    padding: 0.7rem;
 }
-.imgLogo{
+
+.imgLogo {
     width: 3.5rem;
 }
-.textLogo{
+
+.textLogo {
     font-family: "NorseB";
     font-size: 3.7rem;
     color: white;
 }
-.textCopy{
+
+.textCopy {
     color: rgba(255, 255, 255, 0.658);
     font-size: 0.6rem;
     text-align: center;
-    padding-bottom: .3rem;
+    padding-bottom: 0.3rem;
 }
 
+.container__formContainer {
+    background-color: #f9fafb;
+    flex: 1;
+}
 
+.textformContainer {
+    margin-top: 7rem;
+    margin-left: 2.5rem;
+    font-weight: 600;
+    max-width: 530px;
+    font-size: 1.1rem;
+}
 
+.textformContainer span {
+    display: block;
+}
 
+.textformContainerLast {
+    margin: 1rem 0 1.2rem 0;
+}
 
-.container__formContainer{
-    background-color:blue;
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    padding: 1rem 2.5rem;
+    gap: 1rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.192);
+}
+
+.form h2 {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.form__row {
+    display: flex;
+    gap: 3em;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+input {
+    display: block;
+    padding: 0.5rem 0.6rem;
+    width: 15rem;
+    border: 1px solid rgba(128, 128, 128, 0.363);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.redInput {
+    border-color: rgb(209, 45, 45);
+}
+
+.passwordError {
+    visibility: hidden;
+    text-transform: lowercase;
+    color: rgb(209, 45, 45);
+}
+
+.passwordError::before {
+    content: "* ";
+    vertical-align: middle;
+}
+
+.btnCreateAcount {
+    background-color: #596d48;
+    color: white;
+    font-weight: bold;
+    padding: 0.7em 2.52rem;
+    border: none;
+    border-radius: 5px;
+    margin: 1.5rem 2.5rem;
+    font-size: 0.95rem;
+}
+
+.AlreadyCount {
+    margin-left: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
