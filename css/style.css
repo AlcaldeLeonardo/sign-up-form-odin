@@ -112,7 +112,6 @@ input {
 }
 
 .passwordError {
-    visibility: hidden;
     text-transform: lowercase;
     color: rgb(209, 45, 45);
 }
@@ -138,4 +137,7 @@ input {
     margin-bottom: 3rem;
     font-weight: 500;
     font-size: 0.9rem;
+}
+.nonVisible {
+    visibility: hidden;
 }
