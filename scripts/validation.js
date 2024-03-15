@@ -22,7 +22,7 @@ form.addEventListener(`submit`, e =>{
     e.preventDefault();
     if(inputPassword.value == inputPasswordConfirm.value) {
         console.log("se envio");
-        window.location.href = `congratulation.html`
+        window.location.href = `html/congratulation.html`
     }
 })
 
