@@ -1,31 +1,30 @@
 const inputPassword = document.querySelector(`.containerPassword`)
 const inputPasswordConfirm = document.querySelector(`.containerPasswordconfirm`)
-const passwordContainers = document.querySelectorAll(`.containerPassword`)
-const btnCreateCount = document.querySelector(`.btnCreateAcount`)
+const form = document.querySelector(`.form`)
 const passwordError = document.querySelector('.passwordError')
 
-btnCreateCount.addEventListener(`click`,(e)=>{
-    e.preventDefault();
-    console.log("hiciste click");
-    if(inputPassword.value != inputPasswordConfirm.value) {
-        inputPassword.classList.add("redInput")
-        inputPasswordConfirm.classList.add("redInput")
+function validatePassword(){
+    let value1 = inputPassword.value 
+    let value2 = inputPasswordConfirm.value
+    
+    if(value1 != value2 && value2 != "") {
+        inputPassword.classList.add(`redInput`)
+        inputPasswordConfirm.classList.add(`redInput`)
         passwordError.classList.remove(`nonVisible`)
-        
-        passwordContainers.forEach(container => {
-            container.addEventListener("input",()=>{
-                if(inputPassword.value != inputPasswordConfirm.value) {
-                    inputPassword.classList.add("redInput")
-                    inputPasswordConfirm.classList.add("redInput")
-                    passwordError.classList.remove(`nonVisible`)
-                }else {
-                    inputPassword.classList.remove("redInput")
-                    inputPasswordConfirm.classList.remove("redInput")
-                    passwordError.classList.add(`nonVisible`)
-                }
-            })
-        })
     }else{
-        window.location.href = "./congratulation.html"
+        inputPassword.classList.remove(`redInput`)
+        inputPasswordConfirm.classList.remove(`redInput`)   
+        passwordError.classList.add(`nonVisible`)
+    }
+}
+
+form.addEventListener(`submit`, e =>{
+    e.preventDefault();
+    if(inputPassword.value == inputPasswordConfirm.value) {
+        console.log("se envio");
+        window.location.href = `/congratulation.html`
     }
 })
+
+inputPassword.addEventListener(`input`, validatePassword)
+inputPasswordConfirm.addEventListener(`input`, validatePassword)

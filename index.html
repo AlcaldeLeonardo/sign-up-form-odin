@@ -35,22 +35,24 @@
                     </p>
                     <p class="textformContainerLast">You know you want to.</p>
                 </div>
-                <form class="form" action="" method="post">
-                    <h2>Let's do this!</h2>
-                    <div class="form__row">
-                        <label for="">First Name<input type="text" /></label>
-                        <label for="">Last Name<input type="text" /></label>
+                <form class="form" action="#" method="post">
+                    <div class="form__whiteSection">
+                        <h2>Let's do this!</h2>
+                        <div class="form__row">
+                            <label for="firstName">First Name<input id="firstName" required type="text" /></label>
+                            <label for="lastName">Last Name<input id="lastName" required type="text" /></label>
+                        </div>
+                        <div class="form__row">
+                            <label for="email">Email<input id="email" required type="email" /></label>
+                            <label for="phoneNumber">Phone Number<input id="phoneNumber" required type="tel" /></label>
+                        </div>
+                        <div class="form__row">
+                            <label for="password">Password<input id="password" required class="containerPassword" type="password" /><p class="passwordError nonVisible">password do not match</p></label>
+                            <label  for="confirmPassword">Confirm Password<input id="confirmPassword" required class="containerPassword containerPasswordconfirm" type="password" /></label>
+                        </div>
                     </div>
-                    <div class="form__row">
-                        <label for="">Email<input type="email" /></label>
-                        <label for="">Phone Number<input type="tel" /></label>
-                    </div>
-                    <div class="form__row">
-                        <label for="">Password<input class="containerPassword" type="password" /><p class="passwordError nonVisible">password do not match</p></label>
-                        <label  for="">ConfirmPassword<input class="containerPassword containerPasswordconfirm" type="password" /></label>
-                    </div>
+                    <button class="btnCreateAcount"type="submit">Create Acount</button>
                 </form>
-                <button class="btnCreateAcount"type="button">Create Acount</button>
                 <p class="AlreadyCount">Alread have an account? <a href="">Log in</a></p>
             </div>
         </main>
